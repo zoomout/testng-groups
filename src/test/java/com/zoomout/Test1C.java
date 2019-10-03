@@ -13,11 +13,12 @@ public class Test1C extends Test1Common {
 
     @Test(groups = "group2")
     public void test1C_group2() {
-        System.out.println("      test1C Group2");
+        long id = Thread.currentThread().getId();
+        System.out.println("      test1C Group2 Thread id is: " + id);
     }
 
     @AfterMethod(alwaysRun = true)
-    public void  afterMethodC() {
+    public void afterMethodC() {
         System.out.println("    afterMethod test1C");
     }
 

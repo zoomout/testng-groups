@@ -3,6 +3,7 @@ package com.zoomout;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class Test1A extends Test1Common {
 
@@ -13,7 +14,12 @@ public class Test1A extends Test1Common {
 
     @Test(groups = "group1")
     public void test1A_group1() {
-        System.out.println("      test1A Group1");
+        long id = Thread.currentThread().getId();
+        System.out.println("      test1A Group1 Thread id is: " + id);
+        SoftAssert sa = new SoftAssert();
+        sa.assertEquals(1 ,1);
+        sa.assertEquals(2 ,2);
+        sa.assertAll("Something failed");
     }
 
     @AfterMethod(alwaysRun = true)

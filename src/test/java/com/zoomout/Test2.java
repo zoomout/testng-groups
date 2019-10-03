@@ -25,7 +25,8 @@ public class Test2 implements CommonBeforeSuite {
 
     @Test(groups = "group2", dataProvider = "datProvider2")
     public void test2_group2(int i) {
-        System.out.println("      test2 Group2 " + i);
+        long id = Thread.currentThread().getId();
+        System.out.println("      test2 Group2 " + i + " Thread id is: " + id);
     }
 
     @AfterMethod(alwaysRun = true)
