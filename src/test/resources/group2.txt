@@ -1,0 +1,21 @@
+BEFORE SUITE
+
+  beforeClass Test1Common
+   beforeGroup2
+    beforeMethod test1C
+      test1C Group2
+    afterMethod test1C
+  afterClass Test1Common
+
+  beforeClass Test2
+   datProvider test2
+    beforeMethod test2
+      test2 Group2 1
+    afterMethod test2
+    beforeMethod test2
+      test2 Group2 2
+    afterMethod test2
+   afterGroup2
+  afterClass Test2
+
+AFTER SUITE

@@ -1,0 +1,17 @@
+BEFORE SUITE
+
+  beforeClass Test1Common
+   beforeGroup1
+    beforeMethod test1A
+      test1A Group1
+    afterMethod test1A
+  afterClass Test1Common
+
+  beforeClass Test1Common
+    beforeMethod test1B
+      test1B Group1
+    afterMethod test1B
+   afterGroup1
+  afterClass Test1Common
+
+AFTER SUITE
